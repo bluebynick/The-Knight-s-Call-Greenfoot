@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Bullet
+comment0.text=This\ is\ an\ abstract\ class\ for\ all\ the\ bullets\ in\ the\ Knight's\ call.\r\n\ This\ class\ handles\ the\ range,\ and\ the\ position\ of\ the\ closest\ enemy\ \r\n\ which\ will\ be\ targeted\ and\ it\ sends\ the\ memory\ location\ of\ that\ enemy\r\n\ to\ the\ targeting\ functionality\ in\ MyWorld.\ \r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=Bullet()
+comment1.text=This\ is\ a\ general\ constructor\ for\ the\ class\ Bullet.\ \r\n\ It\ creates\ the\ size\ of\ the\ GreenfootImage\ and\ the\ bullet's\ speed.\r\n
+comment2.params=
+comment2.target=int\ distanceX()
+comment2.text=This\ is\ a\ method\ that\ works\ the\ x\ \ range.\r\n\ This\ method\ gets\ the\ distance\ between\ the\ x\ position\ of\ the\ bullet\ \r\n\ and\ the\ x\ position\ of\ the\ tower.\r\n
+comment3.params=
+comment3.target=int\ distanceY()
+comment3.text=This\ is\ a\ method\ that\ works\ the\ y\ range.\r\n\ This\ method\ gets\ the\ distance\ between\ the\ y\ position\ of\ the\ bullet\ \r\n\ and\ the\ x\ position\ of\ the\ tower.\r\n
+comment4.params=
+comment4.target=int\ enemyX()
+comment4.text=This\ is\ a\ method\ that\ gets\ the\ x\ position\ of\ the\ enemy.\r\n
+comment5.params=
+comment5.target=int\ enemyY()
+comment5.text=This\ is\ a\ method\ that\ gets\ the\ y\ position\ of\ the\ enemy.\r\n
+comment6.params=
+comment6.target=void\ bulletMovement()
+comment6.text=This\ is\ a\ method\ that\ makes\ the\ bullet\ move\ until\ it\ has\ eclipsed\ a\ range.\r\n\ It\ gets\ the\ value\ of\ distanceX\ and\ distanceY\ and\ checks\ if\ it's\ >\ 50.\ If\ \r\n\ so,\ it\ removes\ the\ bullet.\r\n
+comment7.params=
+comment7.target=int\ getDamage()
+comment7.text=An\ abstract\ method\ to\ get\ the\ current\ damage\ of\ the\ bullet.\r\n
+numComments=8

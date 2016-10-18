@@ -1,0 +1,24 @@
+Game coded and developped by Nicholas Paul
+
+Intro music: Elven Lands by Derek Fiechter
+
+Level one music: Epic Legend (Auracle Music) by Darko
+
+Level two music: Wolf Blood by Adrian von Ziegler
+
+Level three music: Legend by Adrian von Ziegler
+
+Credits for the scanText ()  and createText() methods in instructions 
+and credits go to davmac 
+davmac(2012/5/15) filereader [Source code]. http://www.greenfoot.org/scenarios/5177
+
+Credits for the tower pngs go to Clash of Lords II
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Dirt
+comment0.text=This\ is\ a\ class\ that\ is\ used\ for\ the\ non\ road\ locations\ in\ the\ game.\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=Dirt()
+comment1.text=Basic\ constructor\ for\ the\ class\ Dirt.\r\n
+comment2.params=
+comment2.target=java.awt.Color\ c()
+comment2.text=This\ is\ a\ method\ that\ makes\ the\ a\ new\ random\ colour.\r\n
+comment3.params=
+comment3.target=void\ act()
+numComments=4

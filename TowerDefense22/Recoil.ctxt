@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Recoil
+comment0.text=A\ removeable\ image\ with\ the\ recoil\ as\ the\ assigned\ image.\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=Recoil()
+comment1.text=Basic\ constructor\ for\ the\ recoil\ class\r\n\ \r\n
+comment2.params=
+comment2.target=int\ enemyX()
+comment2.text=This\ is\ a\ method\ that\ gets\ the\ x\ location\ of\ the\ closest\ enemy\r\n
+comment3.params=
+comment3.target=int\ enemyY()
+comment3.text=This\ is\ a\ method\ that\ gets\ the\ y\ location\ of\ the\ closest\ enemy\r\n
+comment4.params=
+comment4.target=int\ actorX()
+comment4.text=This\ is\ a\ method\ that\ gets\ the\ object's\ location\r\n
+comment5.params=
+comment5.target=int\ actorY()
+comment5.text=This\ is\ a\ method\ that\ gets\ the\ object's\ location\r\n
+comment6.params=
+comment6.target=void\ act()
+numComments=7

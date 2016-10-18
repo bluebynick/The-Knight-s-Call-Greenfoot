@@ -1,0 +1,96 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+/**
+ * Write a description of class Tower here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Tower extends Actor
+{
+    /**
+     * Act - do whatever the Tower wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+
+     * tower has
+     * health
+     * location
+     * image
+     * level (health points dependant on level)
+     * spawn (so it's accesible by ennemies)
+
+     * Tower does
+     * upgrade
+     * shoots bullets
+    
+    **/
+    private int towerX,towerY;
+    protected int level, razeTimer;
+    protected boolean canRaze, razeTimerBoo;
+    GreenfootImage towerImage;
+    
+    
+    public Tower(){
+        //towerImage =towerImage.png;
+        this.razeTimer =0;
+        this.canRaze = false;
+        this.razeTimerBoo = false; //this is a timer that makes the razing only happen after a certain amount of time   
+        level = 1;
+    }
+ 
+    public void levelUp(){
+        level +=1;
+    
+    }
+    
+    public int towerX(){
+        towerX = this.getX();
+        return towerX;
+    }
+    
+    public int towerY(){
+        towerY = this.getY();
+        return towerY;
+    }
+    
+    public boolean canSpawn(){
+        boolean spawn = true;
+        if(this.isTouching(Road.class) || this.isTouching(Tower.class)){
+            spawn = false;
+            this.canRaze = true;
+            System.out.println("heyyy");
+        }
+        
+        return spawn;
+    }
+    
+    public void razeTimer(){ //this is a method to control that the razing is not just the placing of the tower
+        if(this.razeTimerBoo == true){ //if the timer is told to start
+            if(razeTimer <5){ //if the timer is less than or equal to 9
+                razeTimer+=1; //add 1
+            }
+            if(razeTimer >=5){ //if it's greater than or equal to 10
+                this.canRaze = true; //make the razing able to happen
+            }
+        }
+        
+    }
+    
+    public void raze(){
+        if(this.canRaze==true){
+            if( Greenfoot.mouseClicked (this)){// if the mouse is clicked on any target
+                List <RangeImg> a = this.getObjectsInRange(80, RangeImg.class); //get any ranges in range of the tower
+                getWorld().removeObject(a.get(0)); //remove the range
+                MyWorld.towers.remove(this); //remove this tower from the towers arraylist
+                getWorld().removeObject(this); //remove this tower
+             }
+        }
+            }
+    
+    public void act(){
+        razeTimer();
+        raze();
+        System.out.println(this.canRaze);
+        //range.setLocation(towerX(),towerY());
+    }  
+}

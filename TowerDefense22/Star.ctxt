@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Star
+comment0.text=This\ is\ a\ class\ that\ is\ used\ for\ the\ specific\ star\ loot.\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=Star()
+comment1.text=This\ is\ a\ basic\ constructor\ for\ the\ class\ Star.\r\n
+comment2.params=
+comment2.target=int\ getX()
+comment2.text=This\ is\ a\ method\ that\ gets\ the\ x\ location\ of\ the\ loot.\r\n
+comment3.params=
+comment3.target=int\ getY()
+comment3.text=This\ is\ a\ method\ that\ gets\ the\ y\ location\ of\ the\ loot.\r\n
+comment4.params=
+comment4.target=void\ removed()
+comment4.text=Abstract\ method\ to\ check\ if\ the\ star\ is\ removed.\ \r\n
+comment5.params=
+comment5.target=void\ animation()
+comment5.text=Method\ that\ handles\ the\ animation.\r\n
+numComments=6

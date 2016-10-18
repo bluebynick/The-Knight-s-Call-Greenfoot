@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Loot
+comment0.text=This\ is\ a\ class\ that\ is\ used\ for\ the\ loot\ dropped\ from\ killed\ enemies.\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=Loot()
+comment1.text=Basic\ constructor\ for\ the\ Loot\ class.\r\n
+comment2.params=
+comment2.target=int\ getX()
+comment2.text=Abstract\ method\ that\ gets\ the\ x\ location\ of\ the\ loot.\r\n
+comment3.params=
+comment3.target=int\ getY()
+comment3.text=Abstract\ method\ that\ gets\ the\ y\ location\ of\ the\ loot.\r\n
+comment4.params=
+comment4.target=void\ removability()
+comment4.text=Abstract\ method\ that\ checks\ if\ it's\ removable.\r\n
+comment5.params=
+comment5.target=void\ act()
+numComments=6

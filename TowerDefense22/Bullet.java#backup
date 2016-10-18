@@ -1,0 +1,81 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*; 
+
+/**
+ * Write a description of class Bullet here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Bullet extends Actor
+
+{
+    /**
+     * Bullet has
+     * location
+     * damage
+     * 
+     * 
+     * 
+     * bullet does
+     * interact (applys damage)
+     * 
+     * 
+     */
+    int xBullet,yBullet, damage,length,width, bSpeed;
+    
+    GreenfootImage t;
+    
+    
+    boolean ice; //for freeze effects later
+    boolean realBoo;
+    
+    public Bullet(){
+        t = new GreenfootImage(25,25);
+        bSpeed = 10;
+        xBullet = 50;
+        yBullet = 0;
+        realBoo = true; //this is a boolean to make sure that the actor exists before checking it's locations
+
+        ice = false;
+    }
+    
+    public void bulletMovement(){
+        if(MyWorld.shot == true){
+            xBullet = getX(); ///xpos of the buller = current actor's x pos
+            yBullet = getY(); //ypos of the buller = current actor's y pos
+            
+            //yBullet= yBullet + bSpeed; //(3) adding the speed to the xx to give it a new value
+            move(10);            //i.e update the position
+            if(this.isAtEdge()){ //(4) check for edge
+                getWorld().removeObject(this); //remove the object if it's at the edge
+                realBoo = false; //tells it not to check below
+                
+            }
+           
+         }            
+            
+        
+        
+        //setLocation(xBullet,yBullet); //(5) set the location = to the current x 
+                           //draw
+        
+        if((MyWorld.shot == true)&& (realBoo == true)){
+            if(this.isTouching(Ennemies.class)){
+           
+                getWorld().removeObject(getOneIntersectingObject(Ennemies.class));
+                //remove the ennemy ^^
+                //getWorld().removeObject(this); //remove the bullet
+           
+        }
+        
+    }
+    }    
+    
+    public void act() 
+    {
+        //x = getX();
+        //y = getY();
+        
+    }    
+}

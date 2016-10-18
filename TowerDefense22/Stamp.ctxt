@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Stamp
+comment0.text=A\ removeable\ image\ with\ the\ normal\ tower\ as\ the\ assigned\ image.\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=int\ towerX()
+comment1.text=This\ is\ a\ method\ that\ gets\ the\ x\ location\ of\ this\ stamp.\r\n
+comment2.params=
+comment2.target=int\ towerY()
+comment2.text=This\ is\ a\ method\ that\ gets\ the\ y\ location\ of\ this\ stamp.\r\n
+comment3.params=
+comment3.target=void\ act()
+numComments=4

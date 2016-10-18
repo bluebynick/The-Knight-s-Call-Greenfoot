@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Enemies
+comment0.text=\r\n\ Enemies\ is\ an\ abstract\ class\ that\ provides\ functionality\ to\ the\ \r\n\ enemies\ in\ the\ game.\ It\ provides\ code\ for\ enemies\ to\ move\ and\ what\r\n\ to\ do\ when\ they\ are\ killed.\ It\ provides\ a\ foundation\ for\ the\ subclasses\r\n\ to\ specify\ their\ graphics\ and\ specific\ details\ seperate\ from\ each\ other\r\n\ while\ having\ built\ off\ the\ same\ framework.\ The\ waypoint\ functionality\ \r\n\ and\ booleans\ is\ handled\ in\ this\ class.\r\n\ \r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=Enemies()
+comment1.text=General\ constructor\ for\ the\ enemies\ class.\ \r\n\ The\ way\ point\ booleans\ and\ the\ locations\ of\ the\ waypoints\ are\ created\ here.\r\n
+comment2.params=i
+comment2.target=void\ movement(int)
+comment2.text=This\ is\ a\ method\ that\ provides\ the\ enemy's\ movement.\ It\ accepts\ the\ speed\ of\ the\ enemy.\r\n\ In\ this\ class\ is\ runs\ a\ variety\ of\ conditions\ to\ determine\ where\ the\ enemy\r\n\ is\ located\ and\ utilizes\ Greenfoot's\ move\ and\ turnTowards\ to\ make\ the\ enemy\ \r\n\ travel\ along\ the\ pre-determined\ path\ (given\ in\ the\ constructor).\r\n\ \r\n
+comment3.params=
+comment3.target=int\ enemyX()
+comment3.text=This\ is\ an\ abstract\ method\ to\ get\ the\ enemy's\ X.\r\n
+comment4.params=
+comment4.target=int\ enemyY()
+comment4.text=This\ is\ an\ abstract\ method\ to\ get\ the\ enemy's\ X.\r\n
+comment5.params=i
+comment5.target=void\ health(int)
+comment5.text=This\ is\ a\ method\ that\ determines\ the\ enemy's\ health.\ It\ takes\ in\ the\ inital\ health\ as\ a\ parameter.\r\n\ It\ detemines\ if\ the\ enemy\ is\ touching\ a\ bullet,\ what\ kind\ of\ bullet\r\n\ and\ handles\ the\ functionality\ if\ an\ enemy\ dies\ (spawning\ loot\ and\ \r\n\ removing\ enemies).\r\n\ \r\n
+comment6.params=
+comment6.target=void\ act()
+numComments=7

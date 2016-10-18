@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MenuScreen
+comment0.text=This\ is\ a\ subclass\ of\ world\ that\ is\ a\ menu\ screen.\r\n\ This\ class\ has\ multiple\ buttons\ and\ changes\ the\ \r\n\ world\ depedant\ on\ the\ button\ clicked.\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=MenuScreen()
+comment1.text=This\ is\ a\ general\ constructor\ for\ the\ MenuScreen\ class.\r\n\ It\ creates\ the\ butotns\ and\ starts\ the\ songs\r\n\ \r\n
+comment2.params=
+comment2.target=void\ act()
+numComments=3

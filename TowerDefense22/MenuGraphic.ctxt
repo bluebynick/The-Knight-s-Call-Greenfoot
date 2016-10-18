@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MenuGraphic
+comment0.text=An\ image\ with\ the\ different\ menu\ square\ as\ the\ image\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=MenuGraphic()
+comment1.text=In\ this\ basic\ constructor\ the\ greenfoot\ image\ is\ created\ and\ assigned\ to\ the\ class's\ i\r\n\ \r\n
+comment2.params=
+comment2.target=void\ act()
+numComments=3

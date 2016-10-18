@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=NormalBullet
+comment0.text=This\ is\ a\ subclass\ of\ Bullet\ that\ has\ the\ specific\ damage\ and\ properties\ of\ a\ normal\ bullet\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=i
+comment1.target=NormalBullet(int)
+comment1.text=Constructor\ for\ the\ icebullet\ class\ that\ accepts\ the\ damage\ as\ a\ parameter.\ \r\n\ \r\n
+comment2.params=
+comment2.target=int\ getDamage()
+comment2.text=This\ is\ a\ method\ that\ gets\ the\ current\ damage.\ \r\n\ \r\n
+comment3.params=
+comment3.target=void\ act()
+numComments=4

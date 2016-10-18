@@ -1,0 +1,42 @@
+The Knight's Call is a game focused on your kindgom's defense of your 
+castle. The Saxon invaders have been knocking on camelot's door for 
+years and the king has hired you as the new captain of defense to 
+create a defenseive layout for the kingdom's towers. In this game 
+you as the Captain will be given coins which you can allocate accordingly
+to the creation of defensive towers.
+
+On the mid left side of the screen the different tower options are 
+displayed along with their coins cost. Normal towers that shoot normal 
+bullets cost 50 and Magic Towers that shoot freezing bullets to stall 
+enemy movement cost 100.  
+
+If you chose to construct a certain tower, your coins will be reduced by 
+the cost and a sprite will appear with the tower's range around it. You
+must then drag the mouse (hold down mouse button on the sprite 
+and move cursor) to the specified location where you'd like to place it. 
+
+Enemies move down the black road path towards your Castle.
+
+You cannot place a tower on the road or on top of another tower.
+
+Towers automatically fire at the closest enemy. Towers can only fire
+bullets within their square range outlined in blue. 
+
+You can delete a tower once you've placed it by clicking directly upon
+it. Your coins will not be returned. 
+
+Starting with 100 coins, every saxon killed by one of your towers will
+drop 10 coins which you can acquire by clicking with the mouse on the 
+spinning icon. Coins can be used to created towers. 
+
+At the end of every round a wizard will spawn to signify the end and 
+once killed there will be a golden star dropped that increasees your 
+normal bullet's damage. 
+
+A new round will begin 3 seconds after the wizard. Enemy health and 
+speed increases per round. 
+
+Your level is displayed on top of your castle. 
+
+You can exit and restart the game at any time by clicking back which
+returns you to the menu screen. 

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Road
+comment0.text=This\ is\ a\ class\ that\ is\ used\ for\ the\ star\ loot\ that\ spawns\ upon\ towers.\ \r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=Road()
+comment1.text=Basic\ constructor\ for\ the\ class\ Road.\r\n
+numComments=2

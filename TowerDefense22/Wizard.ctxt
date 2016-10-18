@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Wizard
+comment0.text=Wizard\ is\ a\ subclass\ of\ enemies\ with\ it's\ specific\ health\ and\ speed\ determined\ by\ the\ level.\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=i\ j
+comment1.target=Wizard(int,\ int)
+comment1.text=This\ is\ the\ constructor\ for\ the\ Wizard\ class.\ It\ accept\ and\ int\ i\ to\ represent\ the\ speed\ and\ int\ j\ to\ be\ the\ enemy's\ health.\r\n\ Specifically\ the\ waypoint\ booleans\ and\ the\ movement\ booleans\ are\ turned\r\n\ false\ until\ need\ true.\r\n
+comment2.params=
+comment2.target=int\ enemyX()
+comment2.text=This\ is\ a\ method\ to\ determine\ the\ x\ location\ of\ the\ enemy.\ \r\n
+comment3.params=
+comment3.target=int\ enemyY()
+comment3.text=This\ is\ a\ method\ to\ determine\ the\ y\ location\ of\ the\ enemy.\ \r\n
+comment4.params=
+comment4.target=void\ act()
+numComments=5

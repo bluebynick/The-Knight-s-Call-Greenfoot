@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Dropped
+comment0.text=This\ is\ a\ class\ that\ is\ used\ for\ the\ specific\ star\ loot\ dropped\ from\ killed\ enemies.\r\n\ Nicholas\ Paul\r\n\ @version\ 22\r\n
+comment1.params=
+comment1.target=void\ removed()
+comment1.text=This\ is\ a\ method\ that\ checks\ if\ the\ star\ is\ removed.\r\n
+comment2.params=
+comment2.target=void\ removability()
+comment2.text=This\ method\ i\ just\ here\ becuase\ it's\ abstract\ in\ star.\r\n\ \r\n
+comment3.params=
+comment3.target=void\ act()
+numComments=4

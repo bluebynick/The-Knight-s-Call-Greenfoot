@@ -1,0 +1,193 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
+/**
+ * Ennemies is an abstract class that provides functionality to the 
+ * ennemies in the game. It provides code for enemies to move and what
+ * to do when they are killed. It provides a foundation for the subclasses
+ * to specify their graphics and specific details seperate from each other
+ * while having built off the same framework
+ * 
+ * Nicholas Paul
+ * @version (a version number or a date)
+ */
+public abstract class Enemies extends Actor
+{
+    /**
+     * 
+     * Ennemies have
+     * a different sprite than the tower
+     * (location and size inherited)
+     * 
+     * 
+     * Ennemies do:
+     * move
+     * interact with tower (and maybe obstacles)
+     * disapear when killed
+     * have the ability to be killed
+     * 
+     * 
+     * 
+     */
+    int xx,y; //xx is the x position of the ennemy (1)
+    int enemyX;
+    int enemyY;
+    protected int timer;
+    protected int health;
+    MouseInfo i;
+    boolean movementBoo, touchingBoo;
+    protected boolean boo3;
+    protected GreenfootImage g;
+    int speed;
+    List <Tower> tower;
+    ArrayList <Explosion> aList = new ArrayList();
+    //Explosion exp;
+    //Explosion exp1;
+    boolean waypoint1, waypoint2; //these are booleas that allow the ennemies to know when to change headings
+     //GreenfootSound freeze = new GreenfootSound("freeze.mp3");  
+
+    
+    public Enemies(){
+       touchingBoo = false;
+       movementBoo = false;
+       waypoint1 = false;
+       waypoint2 = false;
+       this.boo3 = false;
+       y=300;
+       timer =1;
+    }
+    
+    
+    
+    public void movement(int i ){
+        if(movementBoo == false){
+           
+           
+         if((this.waypoint1 == false) &&  (this.waypoint2 == false)){
+             
+            // System.out.println("ooooo");//if it hasn't reached any waypoints
+             turnTowards(50,180); //head it towards the first waypoint
+             if(this.enemyY() >= 180){ //if it reaches the first waypoint
+                  this.waypoint1 = true; //make it so the first waypoint 
+             }
+         }
+         
+         if((this.waypoint1 == true) && (this.waypoint2 == false)){ //if it's at the first waypoint
+             turnTowards(260,180); //head it towards the second waypoint
+             if((this.enemyX() >= 250)){
+                 this.waypoint2 = true;
+              }
+         }
+         
+          if ((this.waypoint1 == true) && (this.waypoint2 == true)){
+               turnTowards(250,400); //head it towards the end
+               if((this.enemyX() >= 250) && (this.enemyY()) >= 399){
+                   
+                    MyWorld.waves -=1;
+                    if(MyWorld.waves == 0){
+                        getWorld().showText("Game Over", 200,200);
+                        MyWorld.boo2 = false; //this ends the game
+                    }
+                    getWorld().removeObject(this);
+                    
+                    this.boo3 = true;
+               }
+         }   
+           move(i);             //i.e update the position
+            
+        }
+        else{ // if it stops moving
+            //g.setColor(java.awt.Color.BLUE); //make it frozen 
+            //g.fill();
+            
+            move(0);
+            if(isAtEdge()){ //(4) check for edge
+                movementBoo = false;
+            }
+            
+        }
+        
+        //setLocation(xx,y); //(5) set the location = to the current x 
+                           //draw 
+    }
+    
+    public abstract int enemyX();
+    public abstract int enemyY();
+    
+    /* this was a method i made to checki if the enemy was clicked 
+    public void isClicked(){
+       i = Greenfoot.getMouseInfo(); //this gets the mouse info everytime it's clicked
+       
+        if(i!=null){ //if it's not null (cause this happens a lot)  
+          
+            if(Greenfoot.mouseClicked(this) == true){ //if the mouse pos goes overthe current actor pos
+                World world; //create variable to store the world 
+                world = getWorld(); //give the variable the correct world to hold
+                world.removeObject(this); //use the variable to tell the world to remove the current object    
+            }
+        }
+    }*/
+    
+    public void health(int i){
+            if(this.boo3 == false){
+                if(this.isTouching(NormalBullet.class)){  //if the enemy is touching a normal bullet
+                        this.health -=NormalBullet.damage; //decrease the enemy's health by the current normal bullet damage. I think this works because we're instantiating an object with the isTouching method? idk it's weird but it works XD
+                        Explosion exp = new Explosion(); // create explosion
+                        getWorld().addObject(exp,this.getX(),this.getY()); 
+                        Actor e = this.getOneIntersectingObject(Bullet.class); //get the bullet
+                        getWorld().removeObject(e); //remove the bullet
+                        
+                        
+                        if(this.health <=0){ //if the enemy's health reaches 0
+                            if(LevelOne.class.isInstance(this)){ //if this is an instance of levelone
+                                Gold g = new Gold(); //spawn a gold
+                                getWorld().addObject(g,this.enemyX(), this.enemyY());
+                            }
+                            else if(Wizard.class.isInstance(this)){ //if this is an instance of wizard
+                                BulletUpgrade g = new BulletUpgrade(); //spawn a bullet upgrade
+                                 getWorld().addObject(g,this.enemyX(), this.enemyY()); 
+                            }
+                            
+                            getWorld().removeObject(this); //remove the enemy
+                            this.boo3 = true;
+                        }
+                        
+                        timer ++;
+                    }
+              }
+             if(this.boo3 == false){   //this condition is double so you can exit it from the first loop    
+                if(this.isTouching(IceBullet.class)){ //if the enemy is touching an ice bullet
+                        this.health -=IceBullet.damage;
+                        this.movementBoo = true; //stop this enemies movement
+                        Explosion exp1 = new Explosion(); //
+                        getWorld().addObject(exp1,this.getX(),this.getY());
+                        
+                        Actor e = this.getOneIntersectingObject(Bullet.class); //get the bullet
+                        getWorld().removeObject(e); //remove the bullet
+                        
+                        
+                        if(this.health <=0){ //if the enemy's health reaches 0
+                            if(LevelOne.class.isInstance(this)){ //if this is an instance of levelone
+                                Gold g = new Gold(); //spawn a gold
+                                getWorld().addObject(g,this.enemyX(), this.enemyY());
+                            }
+                            else if(Wizard.class.isInstance(this)){ //if this is an instance of wizard
+                                BulletUpgrade g = new BulletUpgrade(); //spawn a bullet upgrade
+                                 getWorld().addObject(g,this.enemyX(), this.enemyY()); 
+                            }
+                            
+                            getWorld().removeObject(this); //remove the enemy
+                            this.boo3 = true;
+                        }
+                        //System.out.println(this.health);
+                        timer++;
+                    }
+                
+            }
+           
+        
+    }
+            
+    public void act(){
+        
+    }
+}
