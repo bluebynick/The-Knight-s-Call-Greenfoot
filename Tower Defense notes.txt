@@ -1,0 +1,53 @@
+-waypoint funcitonality is in ennemies
+
+-range functionality is in bullet in bullet movement 
+
+-health is at the bottom of enemies
+
+-cooldown is in keypressed
+
+-leveling up works based on the timer in act
+
+-lives are lost based on the taken out of the world functionality in
+enemies
+-game over is also done by this same method
+
+-holding the space bar lets you change from normal bullet to icebullet
+
+-tower makes sound when placed is in MyWorld.towerDragger()
+
+-animations are handled specifically in level one and level 2
+
+
+
+-you can place the tower wherever you want dependant on where you drag
+the mouse to (sprite goes with it)
+^^^
+-i have a 2D arraylist
+-explosions are created when ennemies are hit
+
+-explosions despawn on a timer
+
+-animations are in removeable image and are created in the same 
+place as explosions 
+
+
+
+
+
+i wanted to make my game creative and unique so i made my ranges squares
+
+next steps are to make sure that you've ddone all the must
+->cooldown!!!
+
+then do some may
+
+then make the UI easier to understand, maybe put some text and some 
+instructions
+
+you should also have life
+
+after that make two types of towers
+
+next steps are to make the range a relative distance from the bullet's 
+starting position. 
